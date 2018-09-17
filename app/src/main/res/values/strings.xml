@@ -2,4 +2,5 @@
     <string name="app_name">Excercise1</string>
     <string name="previewBtnText">PREVIEW</string>
     <string name="messageTextHint">Type your message here...</string>
+    <string name="emailBtnText">EMAIL</string>
 </resources>
