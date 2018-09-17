@@ -15,6 +15,9 @@ public class EmailActivity extends AppCompatActivity {
     private static final String EXTRA_USER_MESSAGE = "EXTRA_USER_MESSAGE";
     private static final String[] EMAIL_ADDRESS = {"andr.academy.msk@gmail.com"};
     private static final String EMAIL_SUBJECT = "Hello, Android Academy MSK!";
+    private static final String MAILTO = "mailto:";
+    private static final String START_EMAILING = "Start Emailing...";
+    private static final String EMAIL_ERROR = "No Email app found";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,15 +40,15 @@ public class EmailActivity extends AppCompatActivity {
 
             public void composeEmail(String[] addresses, String subject, String body) {
                 Intent intent = new Intent(Intent.ACTION_SENDTO);
-                intent.setData(Uri.parse("mailto:"));
+                intent.setData(Uri.parse(MAILTO));
                 intent.putExtra(Intent.EXTRA_EMAIL, addresses);
                 intent.putExtra(Intent.EXTRA_SUBJECT, subject);
                 intent.putExtra(Intent.EXTRA_TEXT, body);
                 if (intent.resolveActivity(getPackageManager()) != null) {
-                    Toast.makeText(getApplicationContext(), "Start Emailing...", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), START_EMAILING, Toast.LENGTH_LONG).show();
                     startActivity(intent);
                 } else {
-                    Toast.makeText(getApplicationContext(), "No Email app found", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), EMAIL_ERROR, Toast.LENGTH_LONG).show();
                 }
             }
         });
