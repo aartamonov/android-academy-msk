@@ -3,4 +3,6 @@
     <string name="preview_btn_text">PREVIEW</string>
     <string name="message_text_hint">Type your message here...</string>
     <string name="email_btn_text">EMAIL</string>
+    <string name="warnint_no_email_app">No Email app found</string>
+    <string name="email_subject">Hello, Android Academy MSK!</string>
 </resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Упражнение 1</string>
+    <string name="message_text_hint">Введите текст сообщения...</string>
+    <string name="preview_btn_text">ПРЕДПРОСМОТР</string>
+    <string name="email_btn_text">ОТПРАВИТЬ</string>
+    <string name="warnint_no_email_app">Не найдено почтовое приложение</string>
+    <string name="email_subject">Привет, Андроид Академия Москва!</string>
+</resources>
