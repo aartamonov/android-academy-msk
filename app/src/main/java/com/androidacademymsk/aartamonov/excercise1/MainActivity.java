@@ -8,19 +8,22 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
+    private EditText messageText;
+    private Button previewBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final EditText messageText = findViewById(R.id.messageText);
-        final Button previewBtn = findViewById(R.id.previewBtn);
+        messageText = findViewById(R.id.message_text);
+        previewBtn = findViewById(R.id.preview_btn);
 
         previewBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String emailMessage = messageText.getText().toString();
-                EmailActivity.start(MainActivity.this, emailMessage);
+                PreviewActivity.start(MainActivity.this, emailMessage);
             }
         });
     }

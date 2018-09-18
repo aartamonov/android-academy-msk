@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Excercise1</string>
-    <string name="previewBtnText">PREVIEW</string>
-    <string name="messageTextHint">Type your message here...</string>
-    <string name="emailBtnText">EMAIL</string>
+    <string name="preview_btn_text">PREVIEW</string>
+    <string name="message_text_hint">Type your message here...</string>
+    <string name="email_btn_text">EMAIL</string>
 </resources>
