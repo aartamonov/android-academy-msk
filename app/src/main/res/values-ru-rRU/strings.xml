@@ -6,4 +6,5 @@
     <string name="email_btn_text">ОТПРАВИТЬ</string>
     <string name="warnint_no_email_app">Не найдено почтовое приложение</string>
     <string name="email_subject">Привет, Андроид Академия Москва!</string>
+    <string name="warning_input_message">Введите текст сообщения!</string>
 </resources>

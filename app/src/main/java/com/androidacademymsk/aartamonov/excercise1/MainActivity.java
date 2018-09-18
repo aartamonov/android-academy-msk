@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String emailMessage = messageText.getText().toString();
+                if (emailMessage.isEmpty()) {
+                    Toast.makeText(MainActivity.this, R.string.warning_input_message, Toast.LENGTH_LONG).show();
+                    return;
+                }
                 PreviewActivity.start(MainActivity.this, emailMessage);
             }
         });

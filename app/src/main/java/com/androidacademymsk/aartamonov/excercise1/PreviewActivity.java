@@ -19,6 +19,12 @@ public class PreviewActivity extends AppCompatActivity {
     private TextView emailView;
     private Button emailBtn;
 
+    public static void start(Activity activity, String emailMessage) {
+        final Intent intent = new Intent(activity, PreviewActivity.class);
+        intent.putExtra(EXTRA_USER_MESSAGE, emailMessage);
+        activity.startActivity(intent);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,11 +57,5 @@ public class PreviewActivity extends AppCompatActivity {
         } else {
             Toast.makeText(getApplicationContext(), R.string.warnint_no_email_app, Toast.LENGTH_LONG).show();
         }
-    }
-
-    public static void start(Activity activity, String emailMessage) {
-        final Intent intent = new Intent(activity, PreviewActivity.class);
-        intent.putExtra(EXTRA_USER_MESSAGE, emailMessage);
-        activity.startActivity(intent);
     }
 }
